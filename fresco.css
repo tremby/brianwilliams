@@ -1,0 +1,105 @@
+body {
+/*    font-family: Georgia, "Trinity.Medium", Trinity, "Times New Roman", Times, serif; */
+   font-family: serif;
+   font-size: 12pt/14pt;
+   color: black;
+}
+
+div.wholepage {
+   width: 800px;
+   margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6, h7 {
+   font-family: Homerton, Helvetica, Arial;
+   margin: 0.2em 0;
+}
+h1 {
+   font-weight: bold;
+   font-size: 24pt;
+}
+h2 {
+   font-weight: medium;
+   font-size: 18pt;
+}
+h3 {
+   font-weight: medium;
+   font-size: 15pt;
+}
+h4 {
+   font-style: italic;
+   font-size: 15pt;
+}
+h5 {
+   font-family: Georgia, "Trinity.Medium", Trinity, "Times New Roman", Times;
+   font-weight: bold;
+   font-size: 12pt;
+}
+h6 {
+   font-weight: medium;
+   font-style: italic;
+   font-size: 12pt;
+}
+h7 {
+   font-weight: bold;
+   font-size: 12pt;
+}
+big {
+   font-size: 14pt;
+}
+small {
+   font-size: 10pt;
+}
+blockquote {
+   font-size: 90%;
+}
+.author {
+   color: #009000;
+   font-style: italic;
+}
+.person {
+   color: #ff0000;
+   font-weight: bold;
+   background: #000000;
+}
+
+/*
+190221 borrowed ".clearfix" and "figure" from Consoc CSS
+
+180216 Clearfix keeps intruders-from-below out of a block such as <article>.
+So each time use   <article class="clearfix">         */
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
+
+figure, figcaption {
+	display: block;
+/* This is default with new browsers but Netsurf hasn't heard of figure or figcaption before so it'd render them inline with surrounding text by default if we didn't tell it this */
+	margin: 6pt 6pt
+}
+figure {
+	text-align: center;
+/* This both centres both the caption (in all cases) and the image itself (when not floated left or right) */
+/*	margin: 2pt 2pt; */
+/* This is roughly what Firefox's default margins for a figure are; Netsurf has none by default */
+}
+figure.left {
+	float: left;
+	margin-left: 0;
+	padding-right: 12pt;
+	text-align: left;
+}
+figure.right {
+	float: right;
+	margin-right: 0;
+	padding-left: 12pt;
+	text-align: left;
+}
+figcaption {
+	font-style: italic;
+	font-size: 11pt;
+}
